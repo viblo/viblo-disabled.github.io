@@ -72,44 +72,47 @@
         .space {
             height: 100px;
         }
+
+        #snow {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: rgb(51, 95, 153);
+        }
     </style>
+    <link rel="stylesheet" href="snow.min.css">
+
+    <script src="snow.min.js"></script>
 </head>
 
-<body>
-    <h1>Julen 2020</h1>
+<body id="snow">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Snow('#snow', {
+                number: 15,
+                r: 2.5,
+                v: 0.8
+            });
+        });
+    </script>
     <div class="card">
 
         <img src="cute-christmas-kids-clip-art-christmas-love-throw-blanket-png-christmas-love-png-880_799.png"
             alt="birthday" class="birthday">
         <div class="text">
             <h1>God Jul Smarty!</h1>
-            <p></p>
+            <p>
+                Årets julklapp: Fondandelar för 10000SEK på
+                <a href="https://www.avanza.se/fonder/om-fonden.html/766853/ubs-lux-ef-china-oppousd-p-sek-acc">
+                    UBS (Lux) EF China Oppo(USD) P SEK acc </a>
+
+            </p>
             <p class="muted"></p>
         </div>
         <div class="space"></div>
     </div>
     <div style="margin-top:50px;"></div>
-    <!-- TradingView Widget BEGIN -->
-    <div class="tradingview-widget-container">
-        <div class="tradingview-widget-container__widget"></div>
-        <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/technicals/"
-                rel="noopener" target="_blank"><span class="blue-text">Technical Analysis for AAPL</span></a> by
-            TradingView</div>
-        <script type="text/javascript"
-            src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
-                {
-                    "interval": "1W",
-                        "width": 425,
-                            "isTransparent": false,
-                                "height": 450,
-                                    "symbol": "NASDAQ:AAPL",
-                                        "showIntervalTabs": true,
-                                            "locale": "en",
-                                                "colorTheme": "light"
-                }
-            </script>
-    </div>
-    <!-- TradingView Widget END -->
+
 
 </body>
 
